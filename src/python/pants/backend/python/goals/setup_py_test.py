@@ -55,7 +55,7 @@ from pants.backend.python.target_types import (
 )
 from pants.backend.python.util_rules import dists, python_sources
 from pants.backend.python.util_rules.interpreter_constraints import InterpreterConstraints
-from pants.core.goals.package import BuiltPackage
+from pants.core.goals.package import BuiltPackage, OutputPathField
 from pants.core.target_types import FileTarget, ResourcesGeneratorTarget, ResourceTarget
 from pants.core.target_types import rules as core_target_types_rules
 from pants.engine.addresses import Address

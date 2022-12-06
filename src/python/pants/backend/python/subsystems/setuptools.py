@@ -13,7 +13,7 @@ from pants.backend.python.subsystems.setup import PythonSetup
 from pants.backend.python.target_types import PythonProvidesField
 from pants.backend.python.util_rules.partition import _find_all_unique_interpreter_constraints
 from pants.core.goals.generate_lockfiles import GenerateToolLockfileSentinel
-from pants.core.goals.package import PackageFieldSet
+from pants.core.goals.package import PackageFieldSet, OutputPathField
 from pants.engine.rules import collect_rules, rule
 from pants.engine.unions import UnionRule
 from pants.util.docutil import git_url
@@ -26,6 +26,7 @@ class PythonDistributionFieldSet(PackageFieldSet):
     required_fields = (PythonProvidesField,)
 
     provides: PythonProvidesField
+    output_path: OutputPathField
 
 
 class Setuptools(PythonToolRequirementsBase):

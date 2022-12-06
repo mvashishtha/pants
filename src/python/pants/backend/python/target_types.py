@@ -1551,6 +1551,7 @@ class PythonDistribution(Target):
         SDistConfigSettingsField,
         BuildBackendEnvVarsField,
         LongDescriptionPathField,
+        OutputPathField,
     )
     help = softwrap(
         f"""
